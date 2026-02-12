@@ -8,11 +8,14 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">28</td><td></td><td></td></tr>
+<tr><th colspan="8">AutomationExerciseSuite</th></tr>
+<tr><td><a href="#t0">RegressionTests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">15,379</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.ecommerce.TestSample</td><td><a href="#m0">testSample</a></td><td rowspan="1">1770789620632</td><td rowspan="1">7</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">AutomationExerciseSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">RegressionTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.HomePageTest</td><td><a href="#m0">verifyTitle</a></td><td rowspan="1">1770881441339</td><td rowspan="1">5432</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.ecommerce.TestSample#testSample</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>RegressionTests</h2><h3 id="m0">tests.HomePageTest#verifyTitle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at tests.HomePageTest.verifyTitle(HomePageTest.java:13)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
