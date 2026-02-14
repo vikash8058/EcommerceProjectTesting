@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<suite name="AutomationSuite">
 
-<suite name="AutomationExerciseSuite">
+	<listeners>
+		<listener class-name="listeners.TestListener" />
+	</listeners>
 
-    <listeners>
-        <listener class-name="listeners.TestListener"/>
-    </listeners>
+	<test name="RegressionTests">
 
-    <test name="RegressionTests" thread-count="5">
+		<classes>
+			<class name="tests.ContactUsTest" />
+			<class name="tests.HomePageTest" />
+		</classes>
 
-        <classes>
-            <class name="tests.HomePageTest"/>
-        </classes>
-
-    </test>
+	</test>
 
 </suite>
