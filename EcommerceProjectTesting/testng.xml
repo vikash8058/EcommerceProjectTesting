@@ -5,11 +5,17 @@
 	</listeners>
 
 	<test name="RegressionTests">
-
+	
 		<classes>
 			<class name="tests.ContactUsTest" />
 			<class name="tests.HomePageTest" />
+<<<<<<< HEAD
 			<class name="tests.ProductsTest" />
+=======
+			<class name="tests.CartTest" />
+			<class name="tests.LoginTest"/>
+
+>>>>>>> e121c4bc003f9a67ae7bb6e79cdd333386f58f5d
 		</classes>
 
 	</test>

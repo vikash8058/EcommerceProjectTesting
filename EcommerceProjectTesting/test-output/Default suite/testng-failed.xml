@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="tests.ProductsTest">
         <methods>
           <include name="setUp"/>
@@ -11,6 +12,17 @@
           <include name="verifyAllProductsDisplayed"/>
         </methods>
       </class> <!-- tests.ProductsTest -->
+=======
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="setupLoginPage"/>
+          <include name="verifyLoginWithValidCredentials"/>
+          <include name="verifyLogoutFunctionality"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+>>>>>>> e121c4bc003f9a67ae7bb6e79cdd333386f58f5d
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
