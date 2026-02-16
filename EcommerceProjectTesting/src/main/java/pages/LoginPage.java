@@ -17,17 +17,12 @@ public class LoginPage extends BasePage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    // ==========================
-    // ======= NAVIGATION =======
-    // ==========================
+
 
     public void openLoginPage() {
         driver.get("https://automationexercise.com/login");
     }
 
-    // ==========================
-    // ======= LOCATORS =========
-    // ==========================
 
     @FindBy(xpath = "//input[@data-qa='login-email']")
     private WebElement loginEmail;
@@ -48,10 +43,7 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//a[contains(text(),'Logged in as')]")
     private WebElement loggedInAsText;
 
-    // ==========================
-    // ======= ACTIONS ==========
-    // ==========================
-
+  
     public void login(String email, String password) {
         wait.until(ExpectedConditions.visibilityOf(loginEmail)).clear();
         loginEmail.sendKeys(email);

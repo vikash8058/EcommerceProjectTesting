@@ -39,6 +39,9 @@ public class HomePage extends BasePage {
 	
 	@FindBy(xpath = "//footer")
 	private WebElement footer;
+	
+	@FindBy(xpath="//a[normalize-space()='Signup / Login']")
+	private WebElement loginbtn;
 
 	
 	//methods
@@ -68,5 +71,9 @@ public class HomePage extends BasePage {
 	
 	public boolean isCategorySectionDisplayed() {
 	    return categorySection.isDisplayed();
+	}
+
+	public void clickSignupLogin() {
+		loginbtn.click();
 	}
 }
