@@ -10,11 +10,11 @@ public class BaseTest {
 
 	@BeforeMethod
 	public void setup() {
-		driver = DriverFactory.initDriver();
+		driver = DriverFactory.initDriver(); // ⭐ create browser
 	}
 
 	@AfterMethod
 	public void tearDown() {
-		DriverFactory.quitDriver();
+		DriverFactory.quitDriver(); // ⭐ close browser
 	}
 }

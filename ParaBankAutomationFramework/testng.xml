@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ParaBank Suite">
+
+	<listeners>
+		<listener class-name="listeners.TestListener" />
+	</listeners>
+
+	<test name="Authentication Module">
+
+		<classes>
+			<class name="tests.RegisterTest" />
+			<class name="tests.LoginTest" />
+		</classes>
+
+	</test>
+
+</suite>

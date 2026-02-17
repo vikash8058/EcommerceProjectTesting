@@ -9,6 +9,7 @@ public class DriverFactory {
 
 	private static WebDriver driver;
 
+	// This method CREATES driver
 	public static WebDriver initDriver() {
 
 		driver = new ChromeDriver();
@@ -20,12 +21,16 @@ public class DriverFactory {
 		return driver;
 	}
 
+	// This method RETURNS existing driver
 	public static WebDriver getDriver() {
 		return driver;
 	}
 
+	// This method CLOSES browser
 	public static void quitDriver() {
-		if (driver != null)
+		if (driver != null) {
 			driver.quit();
+			driver = null;
+		}
 	}
 }
