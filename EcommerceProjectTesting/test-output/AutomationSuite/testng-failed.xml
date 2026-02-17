@@ -6,13 +6,20 @@
   </listeners>
   <test thread-count="5" name="RegressionTests(failed)">
     <classes>
-      <class name="tests.CartTest">
+      <class name="tests.ProductsTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyRemoveProductFromCart"/>
+          <include name="verifyAddToCartFunctionality"/>
         </methods>
-      </class> <!-- tests.CartTest -->
+      </class> <!-- tests.ProductsTest -->
+      <class name="tests.ContactUsTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyContactUsFormSubmission"/>
+        </methods>
+      </class> <!-- tests.ContactUsTest -->
     </classes>
   </test> <!-- RegressionTests(failed) -->
 </suite> <!-- Failed suite [AutomationSuite] -->

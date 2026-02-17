@@ -4,6 +4,9 @@
   <test thread-count="5" name="Default test(failed)">
     <classes>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4be66fdc86e0af1d25d188f0d065dcf13d9e2570
       <class name="tests.ProductsTest">
         <methods>
           <include name="setUp"/>
@@ -12,6 +15,7 @@
           <include name="verifyAllProductsDisplayed"/>
         </methods>
       </class> <!-- tests.ProductsTest -->
+<<<<<<< HEAD
 =======
       <class name="tests.LoginTest">
         <methods>
@@ -23,6 +27,8 @@
         </methods>
       </class> <!-- tests.LoginTest -->
 >>>>>>> e121c4bc003f9a67ae7bb6e79cdd333386f58f5d
+=======
+>>>>>>> 4be66fdc86e0af1d25d188f0d065dcf13d9e2570
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
