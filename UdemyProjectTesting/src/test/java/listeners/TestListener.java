@@ -4,44 +4,43 @@ import base.DriverFactory;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 import utils.ExtentReportManager;
 import utils.ScreenshotUtil;
 
 public class TestListener implements ITestListener {
 
-	@Override
-	public void onStart(ITestContext context) {
-		ExtentReportManager.createReport();
-	}
+	private static ExtentReports extent = ExtentReportManager.getInstance();
+
+	private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		ExtentReportManager.createTest(result.getName());
-		ExtentReportManager.getTest().info("Test Started : " + result.getName());
-	}
 
-	@Override
-	public void onTestSuccess(ITestResult result) {
-		ExtentReportManager.getTest().pass("Test Passed : " + result.getName());
+		ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName());
+
+		test.set(extentTest);
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		ExtentReportManager.getTest().fail("Test Failed : " + result.getName());
-		ExtentReportManager.getTest().fail(result.getThrowable());
-		String screenshotPath = ScreenshotUtil.captureScreenshot(DriverFactory.getDriver(), result.getName());
-		if (screenshotPath != null) {
-			ExtentReportManager.getTest().addScreenCaptureFromPath(screenshotPath, "Failure Screenshot");
-		}
+
+		String path = ScreenshotUtil.captureScreenshot(DriverFactory.getDriver(), result.getMethod().getMethodName());
+
+		test.get().fail(result.getThrowable());
+		test.get().addScreenCaptureFromPath(path);
 	}
 
 	@Override
-	public void onTestSkipped(ITestResult result) {
-		ExtentReportManager.getTest().skip("Test Skipped : " + result.getName());
+	public void onTestSuccess(ITestResult result) {
+		test.get().pass("Test Passed");
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		ExtentReportManager.flushReport();
+		extent.flush();
 	}
 }
