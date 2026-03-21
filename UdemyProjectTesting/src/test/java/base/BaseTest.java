@@ -15,7 +15,7 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.udemy.com/");
 
-		// 🔥 STEP 2: Handle Cloudflare manually
+		// To handle Cloudflare manually
 		try {
 			System.out.println("If CAPTCHA appears, solve it manually...");
 			Thread.sleep(10000); // wait 10 seconds
