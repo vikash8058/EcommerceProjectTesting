@@ -15,7 +15,6 @@ public class DriverFactory {
 
         ChromeOptions options = new ChromeOptions();
 
-        // 🔥 Reduce bot detection
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("--start-maximized");
 
